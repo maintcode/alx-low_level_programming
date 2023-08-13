@@ -3,26 +3,26 @@
 #include <time.h>
 
 int main() {
-    int n, last_digit;
+    int n;
+    srand(time(0)); // Seed the random number generator
 
-    // Seed the random number generator with the current time
-    srand(time(0));
+    n = rand(); // Generate a random number
 
-    // Generate a random number between -1000 and 1000
-    n = rand() % 2001 - 1000;
-
-    // Get the last digit of the number
-    last_digit = n % 10;
-
-    // Check the value of the last digit
     printf("Last digit of %d is ", n);
+
+    int last_digit = n % 10; // Get the last digit
+
+    printf("%d and is ", last_digit);
+
     if (last_digit > 5) {
-        printf("and is greater than 5\n");
+        printf("greater than 5");
     } else if (last_digit == 0) {
-        printf("and is 0\n");
+        printf("0");
     } else {
-        printf("and is less than 6 and not 0\n");
+        printf("less than 6 and not 0");
     }
+
+    printf("\n");
 
     return 0;
 }

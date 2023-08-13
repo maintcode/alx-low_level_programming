@@ -4,21 +4,19 @@
 
 int main() {
     int n;
+    srand(time(0)); // Seed the random number generator
 
-    // Seed the random number generator with the current time
-    srand(time(0));
+    n = rand() % (RAND_MAX + 1) - RAND_MAX / 2; // Generate a random number in the range [-RAND_MAX/2, RAND_MAX/2]
 
-    // Generate a random number between -100 and 100
-    n = rand() % 201 - 100;
-
-    // Check if the number is positive, negative, or zero
+    printf("The number %d is ", n);
     if (n > 0) {
-        printf("%d is positive\n", n);
+        printf("positive");
     } else if (n < 0) {
-        printf("%d is negative\n", n);
+        printf("negative");
     } else {
-        printf("%d is zero\n", n);
+        printf("zero");
     }
+    printf("\n");
 
     return 0;
 }
