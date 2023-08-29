@@ -1,0 +1,1 @@
+This repository  consists of array statements practice
