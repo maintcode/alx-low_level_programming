@@ -1,9 +1,15 @@
 #include <stdio.h>
 
-int main(void) {
-    printf("You are not allowed to use the function puts,\n");
-    printf("But here's a piece of art with proper grammar.\n");
-    printf("This is a beautiful masterpiece!\n");
-    
-    return 0;
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (success)
+ */
+int main(void)
+{
+
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+
+	return (0);
+
 }
