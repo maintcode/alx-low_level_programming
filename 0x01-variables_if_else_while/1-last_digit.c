@@ -2,27 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    int n;
-    srand(time(0)); // Seed the random number generator
+/**
+ * main - Entry point
+ *
+ * Description: Generate a random number and determine if it's greater than 5,
+ * equal to 0, less than 6, then print the result.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-    n = rand(); // Generate a random number
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    printf("Last digit of %d is ", n);
+	printf("The number %d is ", n);
 
-    int last_digit = n % 10; // Get the last digit
+	if (n > 5)
+	{
+		printf("and is greater than 5\n");
+	}
+	else if (n == 0)
+	{
+		printf("and is 0 \n");
+	}
+	else
+	{
+		printf("and is less than 6 and not 0 \n");
+	}
 
-    printf("%d and is ", last_digit);
-
-    if (last_digit > 5) {
-        printf("greater than 5");
-    } else if (last_digit == 0) {
-        printf("0");
-    } else {
-        printf("less than 6 and not 0");
-    }
-
-    printf("\n");
-
-    return 0;
+	return (0);
 }

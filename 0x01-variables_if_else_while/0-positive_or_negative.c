@@ -2,21 +2,35 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    int n;
-    srand(time(0)); // Seed the random number generator
+/**
+ * main - Entry point
+ *
+ * Description: Generate a random number and determine if it's positive,
+ * negative, or zero, then print the result.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int n;
 
-    n = rand() % (RAND_MAX + 1) - RAND_MAX / 2; // Generate a random number in the range [-RAND_MAX/2, RAND_MAX/2]
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-    printf("The number %d is ", n);
-    if (n > 0) {
-        printf("positive");
-    } else if (n < 0) {
-        printf("negative");
-    } else {
-        printf("zero");
-    }
-    printf("\n");
+	printf("The number %d is ", n);
 
-    return 0;
+	if (n > 0)
+	{
+		printf("positive\n");
+	}
+	else if (n == 0)
+	{
+		printf("zero\n");
+	}
+	else
+	{
+		printf("negative\n");
+	}
+
+	return (0);
 }
