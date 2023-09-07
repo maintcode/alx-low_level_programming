@@ -1,17 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    putchar('0');
-    putchar('1');
-    putchar('2');
-    putchar('3');
-    putchar('4');
-    putchar('5');
-    putchar('6');
-    putchar('7');
-    putchar('8');
-    putchar('9');
-    putchar('\n');
-    
-    return 0;
+/**
+ * main - Entry point
+ *
+ * Description: Prints the digits from 0 to 9 followed by a newline.
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int i;
+
+	for (i = 0; i < 10; i++)
+	{
+		putchar(i + '0');
+	}
+
+	putchar('\n');
+
+	return (0);
 }
