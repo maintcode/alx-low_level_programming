@@ -1,17 +1,19 @@
-/*
-* Main - Entry point of the program
+#include <unistd.h>
+
+/**
+* main - Entry point of the program
+*
+*
 * Return: Always 1 (success)
 *
 */
-
-#include <unistd.h>
-
 int main(void)
 {
-	char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char *message = "and that piece of art is useful\" -
+Dora Korpar, 2015-10-19\n";
 
 	write(2, message, 59);
 
-	return 1;
+	return (1);
 
 }
