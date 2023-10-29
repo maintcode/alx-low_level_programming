@@ -4,6 +4,7 @@
  * print_to_98 - Prints natural numbers from n to 98
  * @n: The starting number
  */
+
 void print_to_98(int n)
 {
 	int i;
