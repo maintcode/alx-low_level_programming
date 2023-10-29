@@ -6,7 +6,8 @@
  * @n: The starting number.
  *
  * Description: This function prints natural numbers starting from n up to 98.
- * Numbers are separated by a comma and space, and each line ends with a newline.
+ * Numbers are separated by a comma and space, and each line ends with a\
+ newline.
  */
 
 void print_to_98(int n)
