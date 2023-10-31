@@ -4,6 +4,7 @@
  * _puts - Prints a string followed by a new line.
  * @str: The string to be printed.
  */
+
 void _puts(char *str)
 {
 	int i = 0;
