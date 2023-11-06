@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strcpy - Copies each character from srcto dest
- * @dest - Adds null pointer to end
- * @src - number of elements to print
- * Return - pointer to destination
+ * _strcpy - Copies a string from src to dest
+ * @dest: Pointer to the destination string
+ * @src: Pointer to the source string
+ *
+ * Return: A pointer to the destination string.
  */
-
 char *_strcpy(char *dest, char *src)
 {
 	int i;
@@ -18,5 +18,5 @@ char *_strcpy(char *dest, char *src)
 
 	dest[i] = '\0';
 
-	return dest;
+	return (dest);
 }
