@@ -22,7 +22,7 @@
 
 Score: 0.0% (Checks completed: 0.0%)
 In most projects, we often give you only one main file to test with. For example, this main file is a test for a postitive_or_negative() function similar to the one you worked with in an earlier C project:
-
+```
 carrie@ubuntu:/debugging$ cat main.c
 #include "main.h"
 
@@ -55,6 +55,8 @@ carrie@ubuntu:/debugging$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 positiv
 carrie@ubuntu:/debugging$ ./a.out
 98 is positive
 carrie@ubuntu:/debugging$
+
+```
 Based on the main.c file above, create a file named 0-main.c. This file must test that the function positive_or_negative() gives the correct output when given a case of 0.
 
 You are not coding the solution / function, you’re just testing it! However, you can adapt your function from 0x01. C - Variables, if, else, while - Task #0 to compile with this main file to test locally.
@@ -62,13 +64,15 @@ You are not coding the solution / function, you’re just testing it! However, y
 You only need to upload 0-main.c and main.h for this task. We will provide our own positive_or_negative() function.
 You are not allowed to add or remove lines of code, you may change only one line in this task.
 carrie@ubuntu:/debugging$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 positive_or_negative.c 0-main.c -o 0-main
+
+```
 carrie@ubuntu:/debugging$ ./0-main
 0 is zero
 carrie@ubuntu:/debugging$ wc -l 0-main.c
 16 1-main.c
 carrie@ubuntu:/debugging$
 
-
+```
 ### 1. Like, comment, subscribe
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
@@ -76,6 +80,8 @@ Copy this main file. Comment out (don’t delete it!) the part of the code that 
 
 Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
 You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
+
+```
 carrie@ubuntu:/debugging$ cat 1-main.c
 #include <stdio.h>
 
@@ -113,13 +119,14 @@ carrie@ubuntu:/debugging$ wc -l 1-main.c
 carrie@ubuntu:/debugging$
 
 
-
+```
 
 ### 2. 0 > 972?
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 This program prints the largest of three integers.
 
+```
 carrie@ubuntu:/debugging$ cat 2-main.c
 #include <stdio.h>
 #include "main.h"
@@ -183,6 +190,7 @@ carrie@ubuntu:/debugging$ ./2-main
 carrie@ubuntu:/debugging$
 ? That’s definitely not right.
 
+```
 Fix the code in 2-largest_number.c so that it correctly prints out the largest of three numbers, no matter the case.
 
 Line count will not be checked for this task.
@@ -195,6 +203,7 @@ mandatory
 Score: 0.0% (Checks completed: 0.0%)
 This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
 
+```
 carrie@ubuntu:/debugging$ cat 3-main_a.c
 #include <stdio.h>
 #include "main.h"
@@ -335,10 +344,9 @@ Invalid date: 02/29/2000
 carrie@ubuntu:/debugging$
 ? That doesn’t seem right.
 
+```
 Fix the print_remaining_days() function so that the output works correctly for all dates and all leap years.
 
 Line count will not be checked for this task.
 You can assume that all test cases have valid months (i.e. the value of month will never be less than 1 or greater than 12) and valid days (i.e. the value of day will never be less than 1 or greater than 31).
 You can assume that all test cases have valid month/day combinations (i.e. there will never be a June 31st or November 31st, etc.), but not all month/day/year combinations are valid (i.e. February 29, 1991 or February 29, 2427).
-
-
