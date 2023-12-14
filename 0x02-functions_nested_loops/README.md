@@ -34,23 +34,26 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 # More Info
 You do not have to understand the call by reference (address), stack, static variables, recursions or arrays, yet.
 
-# Tasks
-0. _putchar
+## Tasks
+### 0. _putchar
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a program that prints _putchar, followed by a new line.
 
+```
 The program should return 0
 julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
 julien@ubuntu:~/0x02$ ./0-putchar 
 _putchar
 julien@ubuntu:~/0x02$ 
+
+```
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 0-putchar.c
-    
+
 1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
@@ -58,6 +61,7 @@ Write a function that prints the alphabet, in lowercase, followed by a new line.
 
 Prototype: void print_alphabet(void);
 You can only use _putchar twice in your code
+```
 julien@ubuntu:~/0x02$ cat 1-main.c
 #include "main.h"
 
@@ -75,19 +79,23 @@ julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 
 julien@ubuntu:~/0x02$ ./1-alphabet 
 abcdefghijklmnopqrstuvwxyz
 julien@ubuntu:~/0x02$
+
+```
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 1-alphabet.c
-    
-2. 10 x alphabet
+
+### 2. 10 x alphabet
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
 
 Prototype: void print_alphabet_x10(void);
 You can only use _putchar twice in your code
+
+```
 julien@ubuntu:~/0x02$ cat 2-main.c
 #include "main.h"
 
@@ -114,13 +122,15 @@ abcdefghijklmnopqrstuvwxyz
 abcdefghijklmnopqrstuvwxyz
 abcdefghijklmnopqrstuvwxyz
 julien@ubuntu:~/0x02$ 
+
+```
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 2-print_alphabet_x10.c
-    
-3. islower
+
+### 3. islower
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that checks for lowercase character.
@@ -130,6 +140,7 @@ Returns 1 if c is lowercase
 Returns 0 otherwise
 FYI: The standard library provides a similar function: islower. Run man islower to learn more.
 
+```
 julien@ubuntu:~/0x02$ cat 3-main.c 
 #include "main.h"
 
@@ -154,14 +165,16 @@ int main(void)
 julien@ubuntu:~/0x02$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-islower.c -o 3-islower
 julien@ubuntu:~/0x02$ ./3-islower 
 011
-julien@ubuntu:~/0x02$ 
+julien@ubuntu:~/0x02$
+
+```
 Repo:
 
 GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 3-islower.c
-    
-4. isalpha
+ 
+### 4. isalpha
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that checks for alphabetic character.
@@ -203,8 +216,8 @@ Repo:
 GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 4-isalpha.c
-    
-5. Sign
+
+### 5. Sign
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that prints the sign of a number.
@@ -260,7 +273,7 @@ GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 5-sign.c
     
-6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you
+### 6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that computes the absolute value of an integer.
@@ -304,7 +317,7 @@ GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 6-abs.c
     
-7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
+### 7. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that prints the last digit of a number.
@@ -340,7 +353,7 @@ GitHub repository: alx-low_level_programming
 Directory: 0x02-functions_nested_loops
 File: 7-print_last_digit.c
     
-8. I'm federal agent Jack Bauer, and today is the longest day of my life
+### 8. I'm federal agent Jack Bauer, and today is the longest day of my life
 mandatory
 Score: 0.0% (Checks completed: 0.0%)
 Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
