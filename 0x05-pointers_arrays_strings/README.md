@@ -7,6 +7,7 @@ For this project, we expect you to look at these concepts:
   * [Data Stractures Basics](https://www.tutorialspoint.com/data_structures_algorithms/data_structures_basics.htm)
   * [More on DS](https://www.geeksforgeeks.org/data-structures/)
   * [Career Drill Data Structures](https://www.careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
+
 Struggling with the sandbox? [Try this: Using Docker & WSL on your local host](https://intranet.alxswe.com/concepts/100039)
 
 # Resources
