@@ -11,8 +11,8 @@ __Read or watch:__
   
 __man or help:__
 
-`malloc`
-`free`
+* `malloc`
+* `free`
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), without the help of Google:
