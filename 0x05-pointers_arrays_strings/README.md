@@ -1,13 +1,23 @@
 # 0x05. C - Pointers, arrays and strings
+__Concepts__
+For this project, we expect you to look at these concepts:
+
+* [Pointers and arrays](https://intranet.alxswe.com/concepts/60)
+* [Data Structures](https://intranet.alxswe.com/concepts/120)
+  * [Data Stractures Basics](https://www.tutorialspoint.com/data_structures_algorithms/data_structures_basics.htm)
+  * [More on DS](https://www.geeksforgeeks.org/data-structures/)
+  * [Career Drill Data Structures](https://www.careerdrill.com/blog/coding-interview/choosing-the-right-data-structure-to-solve-problems/)
+Struggling with the sandbox? [Try this: Using Docker & WSL on your local host](https://intranet.alxswe.com/concepts/100039)
+
 # Resources
 ### Read or watch:
 
-* C - Arrays
-* C - Pointers
-* C - Strings
-* Memory Layout
+* [C - Arrays](https://www.tutorialspoint.com/cprogramming/c_arrays.htm)
+* [C - Pointers](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)
+* [C - Strings](https://www.tutorialspoint.com/cprogramming/c_strings.htm)
+* [Memory Layout](https://aticleworld.com/memory-layout-of-c-program/)
 ## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg), without the help of Google:
 
 ## General
 * What are pointers and how to use them
