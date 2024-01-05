@@ -2,11 +2,13 @@
 
 /**
  * main - Entry Point
- * return - Always 0
+ *
+ * return - 0 if succesful
+ *
  */
 
 
-int main (void)
+int main(void)
 {
 	int i, j;
 
