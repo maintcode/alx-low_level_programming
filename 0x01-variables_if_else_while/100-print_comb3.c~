@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/**
+ * main - returns void
+ * return - 0 on success
+ */
+
+int putchar(int c);
+int main (void)
+{
+	putchar(0);
+
+	int putchar(int c)
+	{
+		for (c = 0; c <= 99; c++)
+		{
+			putchar('c');
+		}
+	}
+	return (0);
+}

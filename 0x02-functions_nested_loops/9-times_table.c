@@ -1,24 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_to_98 - Prints natural numbers from n to 98.
- * @n: The starting number.
- *
- * Description: This function prints natural numbers starting from n up to 98.
- * Numbers are separated by a comma and space, and each line ends with a newline.
+ * times_table - Prints the 9 times table, starting with 0
  */
-
-void print_to_98(int n)
+void times_table(void)
 {
-	while (n != 98)
-	{
-		printf("%d, ", n);
-		if (n < 98)
-			n++;
-		else
-			n--;
-	}
+	int i, j, result;
 
-	printf("98\n");
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			result = i * j;
+			if (j == 0)
+				_putchar('0' + result);
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				if (result < 10)
+					_putchar(' ');
+				else
+					_putchar('0' + result / 10);
+				_putchar('0' + result % 10);
+			}
+		}
+		_putchar('\n');
+	}
 }
