@@ -2,7 +2,8 @@
 
 /**
  * main - Entry point of programs
- * Return 0 when succesful
+ *
+ * Return: 0 when succesful
  */
 
 int main(void)
@@ -15,7 +16,7 @@ int main(void)
 /**
  *	while (i < 10)
  *	{
- *	  	putchar(i);
+ *	putchar(i);
  *	}
  */
 	printf("Infinite loop avoided! \\o/\n");
