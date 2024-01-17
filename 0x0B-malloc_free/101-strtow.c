@@ -6,7 +6,7 @@
  * @str: Input string
  * Return: Number of words
  */
-int count_words(char *str)
+static int count_words(char *str)
 {
 	int count = 0;
 	int in_word = 0;
@@ -25,7 +25,39 @@ int count_words(char *str)
 		str++;
 	}
 
-	return count;
+	return (count);
+}
+
+/**
+ * copy_word - Copy a word from source to destination
+ * @src: Source string
+ * @dest: Destination string
+ * @len: Length of the word
+ */
+static void copy_word(char *src, char *dest, int len)
+{
+	int j, k;
+
+	for (j = 0, k = 0; k < len; j++, k++)
+		dest[j] = src[k];
+	dest[j] = '\0';
+}
+
+/**
+ * allocate_and_copy - Allocate memory for a word and copy it
+ * @str: Input string
+ * @len: Length of the word
+ * Return: Allocated memory containing the word
+ */
+static char *allocate_and_copy(char *str, int len)
+{
+	char *word = malloc((len + 1) * sizeof(char));
+
+	if (word == NULL)
+		return (NULL);
+
+	copy_word(str, word, len);
+	return (word);
 }
 
 /**
@@ -39,15 +71,15 @@ char **strtow(char *str)
 	char **arr;
 
 	if (str == NULL || *str == '\0')
-		return NULL;
+		return (NULL);
 
 	words = count_words(str);
 	if (words == 0)
-		return NULL;
+		return (NULL);
 
 	arr = malloc((words + 1) * sizeof(char *));
 	if (arr == NULL)
-		return NULL;
+		return (NULL);
 
 	i = 0;
 	while (*str)
@@ -61,18 +93,15 @@ char **strtow(char *str)
 
 		if (len > 0)
 		{
-			arr[i] = malloc((len + 1) * sizeof(char));
+			arr[i] = allocate_and_copy(str, len);
 			if (arr[i] == NULL)
 			{
 				while (i > 0)
 					free(arr[--i]);
 				free(arr);
-				return NULL;
+				return (NULL);
 			}
 
-			for (j = 0, k = 0; k < len; j++, k++)
-				arr[i][j] = str[k];
-			arr[i][j] = '\0';
 			i++;
 		}
 
@@ -80,5 +109,5 @@ char **strtow(char *str)
 	}
 
 	arr[i] = NULL;
-	return arr;
+	return (arr);
 }
