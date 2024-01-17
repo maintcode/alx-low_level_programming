@@ -6,7 +6,7 @@
  * @str: Input string
  * Return: Number of words
  */
-static int count_words(char *str)
+int count_words(char *str)
 {
 	int count = 0;
 	int in_word = 0;
@@ -26,38 +26,6 @@ static int count_words(char *str)
 	}
 
 	return (count);
-}
-
-/**
- * copy_word - Copy a word from source to destination
- * @src: Source string
- * @dest: Destination string
- * @len: Length of the word
- */
-static void copy_word(char *src, char *dest, int len)
-{
-	int j, k;
-
-	for (j = 0, k = 0; k < len; j++, k++)
-		dest[j] = src[k];
-	dest[j] = '\0';
-}
-
-/**
- * allocate_and_copy - Allocate memory for a word and copy it
- * @str: Input string
- * @len: Length of the word
- * Return: Allocated memory containing the word
- */
-static char *allocate_and_copy(char *str, int len)
-{
-	char *word = malloc((len + 1) * sizeof(char));
-
-	if (word == NULL)
-		return (NULL);
-
-	copy_word(str, word, len);
-	return (word);
 }
 
 /**
@@ -93,7 +61,7 @@ char **strtow(char *str)
 
 		if (len > 0)
 		{
-			arr[i] = allocate_and_copy(str, len);
+			arr[i] = malloc((len + 1) * sizeof(char));
 			if (arr[i] == NULL)
 			{
 				while (i > 0)
@@ -102,6 +70,9 @@ char **strtow(char *str)
 				return (NULL);
 			}
 
+			for (j = 0, k = 0; k < len; j++, k++)
+				arr[i][j] = str[k];
+			arr[i][j] = '\0';
 			i++;
 		}
 

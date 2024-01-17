@@ -10,7 +10,9 @@ int **alloc_grid(int width, int height);
 void free_grid(int **grid, int height);
 int count_words(char *str);
 char **strow(char *str);
-static void copy_word(car *str, char *dest, int len);
-static char *allocate_and_copy(char *str, int len);
-
+/**
+ * static void copy_word(char *str, char *dest, int len);
+ * static char *allocate_and_copy(char *str, int len);
+ * static char **fill_word_array(char **arr, char *str, int words);
+ */
 #endif /* MAIN_H  */
