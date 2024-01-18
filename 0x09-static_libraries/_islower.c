@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * _islower - Writes a character to stdout
- * @c: The character to write
+ * _islower - checks for lowercase character
+ * @c: The character to check
  *
- * Return: On success 1, on error -1 and errno set accordingly.
+ * Return: 1 if c is lowercase, 0 otherwise
  */
-int _islower(char c)
-{
-	return (write(1, &c, 1));
+int _islower(int c) {
+    return (c >= 'a' && c <= 'z');
 }

@@ -1,12 +1,11 @@
 #include "main.h"
 
 /**
- * _isalpha - Writes a character to stdout
- * @c: The character to write
+ * _isalpha - checks for alphabetic character
+ * @c: The character to check
  *
- * Return: On success 1, on error -1 and errno set accordingly.
+ * Return: 1 if c is a letter, 0 otherwise
  */
-int _isalpha(char c)
-{
-	return (write(1, &c, 1));
+int _isalpha(int c) {
+    return _islower(c) || (_isupper(c));
 }
