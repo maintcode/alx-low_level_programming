@@ -1,4 +1,5 @@
-#include <stdlib.h>  // We need this for the malloc function
+#include <stdlib.h>
+#include "main.h"
 
 /**
  * _calloc - Allocates memory for an array and initializes it to zero
