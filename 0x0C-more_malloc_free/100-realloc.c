@@ -13,6 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int min_size, i;
 	char *old_ptr, *new_ptr_char;
+	void *new_ptr;
 	/* Check for special cases */
 	if (ptr == NULL)
 	{
@@ -28,7 +29,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			}
 
 		/* Allocate new memory block */
-		void *new_ptr = malloc(new_size);
+		new_ptr = malloc(new_size);
 
 		/* Check if malloc was successful */
 		if (new_ptr == NULL)
@@ -38,8 +39,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 		/* Copy contents from the old block to the new block */
 		min_size = (old_size < new_size) ? old_size : new_size;
-		*old_ptr = ptr;
-		*new_ptr_char = new_ptr;
+		old_ptr = ptr;
+		new_ptr_char = new_ptr;
 
 		for (i = 0; i < min_size; i++)
 		{
