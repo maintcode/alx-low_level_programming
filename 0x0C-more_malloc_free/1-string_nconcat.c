@@ -35,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	/* Allocate memory for the concatenated string */
 	concatenated = malloc(len_s1 + len_s2 + 1);
 	if (concatenated == NULL)
-		return NULL;
+		return (NULL);
 
 	/* Copy characters from s1 to concatenated */
 
