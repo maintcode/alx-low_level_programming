@@ -1,6 +1,14 @@
 #include <stdlib.h>
 #include "main.h"
 
+/**
+ * array_range - check the range
+ * @min: checks minimum range
+ * @max: checks maximum range
+ *
+ * Return: 0 on success else 1
+ */
+
 int *array_range(int min, int max)
 {
 	int size, *arr, i;
