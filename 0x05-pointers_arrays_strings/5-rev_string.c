@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -8,22 +9,22 @@
 void rev_string(char *s)
 {
 	int length = 0;
+	int start, end;
+	char temp;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-
-	int start = 0;
-	int end = length - 1;
-
+	start = 0;
+	end = length - 1;
 
 	while (start < end)
 	{
-		char temp = s[start];
+		temp = s[start];
 		s[start] = s[end];
-		_printf('\n');
+
 		s[end] = temp;
 		start++;
 		end--;
