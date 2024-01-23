@@ -4,40 +4,40 @@
 
 /**
  * new_dog - Creates a new dog.
- * @name: Name of the dog.
- * @age: Age of the dog.
- * @owner: Owner of the dog.
+ * @name: The name of the new dog.
+ * @age: The age of the new dog.
+ * @owner: The owner of the new dog.
  *
- * Return: Pointer to the new dog, or NULL if the function fails.
+ * Return: Pointer to the new dog struct, or NULL if function fails.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog;
+	dog_t *new_dog;
 
-	/* Allocate memory for the new dog */
-	newDog = malloc(sizeof(dog_t));
-	if (newDog == NULL)
+	/* Allocate memory for the new dog struct */
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 		return (NULL);
 
 	/* Allocate memory and copy the name */
-	newDog->name = strdup(name);
-	if (newDog->name == NULL)
+	new_dog->name = strdup(name);
+	if (new_dog->name == NULL)
 	{
-		free(newDog);
+		free(new_dog);
 		return (NULL);
 	}
 
-	/* Allocate memory and copy the owner */
-	newDog->owner = strdup(owner);
-	if (newDog->owner == NULL)
+	/* Copy the age and owner */
+	new_dog->age = age;
+	new_dog->owner = strdup(owner);
+
+	/* Check for memory allocation failure */
+	if (new_dog->owner == NULL)
 	{
-		free(newDog->name);
-		free(newDog);
+		free(new_dog->name);
+		free(new_dog);
 		return (NULL);
 	}
 
-	/* Set the age of the dog */
-	newDog->age = age;
-
-	return (newDog);
+	return (new_dog);
 }
