@@ -1,29 +1,32 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * main - Entry point
- * @argc: Number of command line arguments
- * @argv: Array of command line arguments
- * Return: 0 on success, 1 on error
+ * main - Entry point of the program
+ * @argc: Number of arguments
+ * @argv: Array of argument string
+ *
+ * Return: 0 on success
  */
 int main(int argc, char *argv[])
 {
-	/* Ensure there is at least one command line argument */
-	if (argc > 0)
+	print_args(argc, argv);
+	return (0);
+}
+
+
+/**
+ * print_args - Prints all arguments received
+ * @argc: Number of arguments
+ * @argv: Array of argument strings
+ */
+
+void print_args(int argc, char *argv[])
+{
+	int i;
+
+	for (i = 0; i < argc; i++)
 	{
-		/* Print the program name using _putchar */
-		while (*argv[0] != '\0')
-		{
-			_putchar(*argv[0]);
-			argv[0]++;
-		}
-
-		/* Print a new line at the end */
-		_putchar('\n');
-
-		return (0); /* Return success */
+		printf("%s\n", argv[i]);
 	}
-
-	return (1); /* Return error if no command line arguments */
 }
