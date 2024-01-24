@@ -7,5 +7,6 @@ void print_name(char *name, void (*f)(char *));
 void print_uppercase(char *name);
 void print_lowercase(char *name);
 void array_iterator(int *array, size_t size, void (*action)(int));
+int int_index(int *array, int size, int (*cmp)(int));
 
 #endif /* FUNCTION_POINTERS_H */
